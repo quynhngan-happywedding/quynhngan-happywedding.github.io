@@ -11,11 +11,10 @@
     
     <style>
         :root {
-            /* Bộ màu lấy chính xác từ file Canva */
-            --bg-color: #f8f6f2;       /* Màu nền kem sáng */
-            --primary-red: #7a0000;    /* Màu đỏ rượu (Tiêu đề) */
-            --text-brown: #624a44;     /* Màu nâu xám (Nội dung) */
-            --accent-gold: #b9a686;    /* Màu vàng đồng (Trang trí) */
+            --bg-color: #f8f6f2;
+            --primary-red: #7a0000;
+            --text-brown: #624a44;
+            --accent-gold: #b9a686;
         }
 
         body {
@@ -26,9 +25,11 @@
             color: var(--text-brown);
             line-height: 1.6;
             overflow-x: hidden;
+            background-image: url('images/90f78445683f37ba89e12e9535c879cc.jpg'); /* Using the main image as a repeating background */
+            background-size: cover;
+            background-attachment: fixed;
         }
 
-        /* Typography */
         h1, h2, h3, .serif-font {
             font-family: 'Cormorant Garamond', serif;
             text-transform: uppercase;
@@ -36,31 +37,28 @@
         }
 
         .script-font {
-            font-family: 'Great Vibes', cursive; /* Hoặc Dancing Script */
+            font-family: 'Great Vibes', cursive;
             font-weight: 400;
         }
 
-        /* Hiệu ứng lụa nền (tùy chọn, nếu muốn giống ảnh nền Canva) */
         .bg-silk {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             background: url('https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-            opacity: 0.15; /* Làm mờ để không rối mắt */
+            opacity: 0.15;
             z-index: -1;
             pointer-events: none;
         }
 
-        /* --- CONTAINER CHÍNH --- */
         .wrapper {
-            max-width: 600px; /* Giống khổ dọc điện thoại/thiệp mời */
+            max-width: 600px;
             margin: 0 auto;
-            background-color: var(--bg-color);
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
             box-shadow: 0 0 20px rgba(0,0,0,0.05);
             padding-bottom: 50px;
             position: relative;
         }
 
-        /* --- HEADER --- */
         header {
             padding: 60px 20px;
             text-align: center;
@@ -89,13 +87,12 @@
         }
 
         .sub-text {
-            font-family: 'Dancing Script', cursive; /* Dùng font này cho đoạn text viết tay */
+            font-family: 'Dancing Script', cursive;
             font-size: 2rem;
             color: #61433c;
             margin-top: 20px;
         }
 
-        /* --- COUPLE NAMES --- */
         .names-section {
             text-align: center;
             padding: 20px;
@@ -104,7 +101,7 @@
         .couple-name {
             font-family: 'Great Vibes', cursive;
             font-size: 3.5rem;
-            color: #ac7c6e; /* Màu hồng đất nhạt hơn chút */
+            color: #ac7c6e;
             margin: 10px 0;
             line-height: 1.2;
         }
@@ -115,26 +112,29 @@
             color: var(--text-brown);
         }
 
-        /* --- ẢNH CẶP ĐÔI --- */
         .photo-frame {
             margin: 20px auto;
             width: 80%;
             position: relative;
             padding: 10px;
-            border: 1px solid var(--accent-gold); /* Viền mảnh */
+            border: 1px solid var(--accent-gold);
         }
         
         .photo-frame img {
             width: 100%;
             height: auto;
             display: block;
-            filter: sepia(10%); /* Chút màu cổ điển */
+            filter: sepia(10%);
         }
 
-        /* --- LỊCH (CALENDAR) --- */
         .calendar-section {
             text-align: center;
             padding: 40px 20px;
+            background-image: url('images/calendar-bg.png');
+            background-size: cover;
+            background-position: center;
+            border: 1px solid var(--accent-gold);
+            margin: 20px;
         }
 
         .calendar-title {
@@ -142,7 +142,6 @@
             letter-spacing: 2px;
             color: var(--primary-red);
             margin-bottom: 5px;
-            border-bottom: 1px solid var(--primary-red);
             display: inline-block;
             padding-bottom: 5px;
         }
@@ -179,36 +178,36 @@
         }
 
         .day.active {
-            background-color: transparent;
-            color: var(--primary-red);
+            background-color: var(--primary-red);
+            color: white;
+            border-radius: 50%;
             font-weight: bold;
             position: relative;
         }
-        
-        /* Vòng tròn trái tim bao quanh ngày 11 */
-        .day.active::after {
-            content: '♡';
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -55%);
-            font-size: 2.5rem;
-            color: var(--primary-red);
-            opacity: 0.3;
-            z-index: -1;
-        }
 
-        /* --- THÔNG TIN --- */
         .details-section {
             text-align: center;
             padding: 30px 20px;
         }
+        
+        .details-section .detail-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+        }
 
+        .details-section .icon {
+            font-size: 1.5rem;
+            color: var(--primary-red);
+            margin-right: 15px;
+        }
+        
         .big-time {
             font-size: 2.5rem;
             color: var(--text-brown);
             font-weight: bold;
             font-family: 'Cormorant Garamond', serif;
-            margin: 10px 0;
         }
 
         .location-name {
@@ -218,19 +217,14 @@
             color: var(--text-brown);
             margin-bottom: 5px;
             font-family: 'Cormorant Garamond', serif;
-            text-decoration: underline;
         }
 
-        /* --- BẢN ĐỒ --- */
         .map-wrapper {
             width: 100%;
             height: 300px;
             margin-top: 20px;
-            border-top: 2px solid var(--bg-color);
-            border-bottom: 2px solid var(--bg-color);
         }
 
-        /* --- ĐẾM NGƯỢC --- */
         .countdown-box {
             display: flex;
             justify-content: center;
@@ -254,12 +248,20 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+        
+        .illustration-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .illustration-section img {
+            max-width: 80%;
+            height: auto;
+        }
 
-        /* --- FOOTER --- */
         .footer {
             text-align: center;
             padding: 40px 20px;
-            background-color: #f2efea; /* Màu đậm hơn nền chút */
         }
         
         .celebrate-text {
@@ -268,7 +270,6 @@
             color: #000;
         }
 
-        /* --- MUSIC PLAYER --- */
         .music-player {
             position: fixed;
             bottom: 20px;
@@ -292,7 +293,6 @@
             font-size: 1rem;
         }
 
-        /* Responsive */
         @media (max-width: 480px) {
             .main-title { font-size: 3rem; }
             .couple-name { font-size: 2.8rem; }
@@ -300,8 +300,6 @@
     </style>
 </head>
 <body>
-
-    <div class="bg-silk"></div>
 
     <div class="wrapper">
         <header>
@@ -324,15 +322,6 @@
             <img src="./images/90f78445683f37ba89e12e9535c879cc.jpg" alt="Wedding Photo">
         </div>
 
-        <div class="details-section">
-            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">
-                Thư mời tham dự đám cưới
-            </p>
-            <p class="serif-font" style="font-size: 1.1rem; margin-top: 10px;">
-                Sự hiện diện của quý vị là<br>niềm vinh hạnh của chúng tôi
-            </p>
-        </div>
-
         <div class="calendar-section">
             <div class="calendar-title">THÁNG MỘT</div>
             <span class="calendar-year">2026</span>
@@ -351,38 +340,36 @@
                 
                 <div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div><div class="day">29</div><div class="day">30</div><div class="day">31</div>
             </div>
-        </div>
-
-        <div class="countdown-box" id="countdown">
-            <div class="cd-item"><span class="cd-num" id="days">00</span><span class="cd-label">Ngày</span></div>
-            <div class="cd-item"><span class="cd-num" id="hours">00</span><span class="cd-label">Giờ</span></div>
-            <div class="cd-item"><span class="cd-num" id="minutes">00</span><span class="cd-label">Phút</span></div>
-            <div class="cd-item"><span class="cd-num" id="seconds">00</span><span class="cd-label">Giây</span></div>
-        </div>
-
-        <div class="details-section">
-            <div class="big-time">18:00</div>
-            <div style="font-style: italic; margin-bottom: 10px;">Chủ Nhật, Ngày 11 Tháng 01 Năm 2026</div>
             
-            <div class="location-name">GOLDEN PALACE</div>
-            <div style="font-size: 0.9rem;">Trung tâm Tiệc cưới & Hội nghị</div>
-            <div style="font-size: 0.9rem;">Biên Hòa, Đồng Nai</div>
+            <div class="details-section">
+                <div class="detail-item">
+                    <div class="icon"><i class="far fa-clock"></i></div>
+                    <div class="big-time">18:00</div>
+                </div>
+                <div class="detail-item">
+                    <div class="icon"><i class="far fa-calendar-alt"></i></div>
+                    <div>11 | 01 | 2026</div>
+                </div>
+                <div class="detail-item">
+                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="location-name">GOLDEN PALACE BIÊN HÒA</div>
+                </div>
+            </div>
         </div>
-
-        <div class="map-wrapper">
-            <iframe 
-                width="100%" 
-                height="100%" 
-                frameborder="0" 
-                style="border:0" 
-                src="https://www.google.com/maps?q=10.964256686278185,106.84397027032419&hl=vi&z=16&output=embed" 
-                allowfullscreen>
-            </iframe>
+        
+        <div class="details-section">
+             <p class="serif-font" style="font-size: 1.1rem; margin-top: 10px;">
+                Sự hiện diện của quý vị là<br>niềm vinh hạnh của chúng tôi
+            </p>
+        </div>
+        
+        <div class="illustration-section">
+            <img src="https://i.imgur.com/example.png" alt="celebration illustration">
         </div>
 
         <div class="footer">
             <div class="celebrate-text">celebrate with us!</div>
-            <p style="margin-top: 10px; font-size: 0.9rem;">on forever</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">we've decided on forever</p>
         </div>
     </div>
 
@@ -398,8 +385,6 @@
     </div>
 
     <script>
-        // --- Xử lý đếm ngược ---
-        // Ngày 11/01/2026 lúc 17:00 (hoặc 18:00 theo thiết kế)
         const weddingDate = new Date(2026, 0, 11, 18, 0, 0).getTime();
 
         const timer = setInterval(function() {
@@ -423,7 +408,6 @@
             document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
         }, 1000);
 
-        // --- Xử lý Nhạc nền ---
         const music = document.getElementById("bgMusic");
         const btn = document.getElementById("musicToggle");
         let isPlaying = false;
@@ -439,7 +423,6 @@
             isPlaying = !isPlaying;
         }
         
-        // Tự động phát nhạc khi chạm vào màn hình lần đầu (do chính sách trình duyệt chặn tự phát)
         document.body.addEventListener('click', function() {
             if (!isPlaying) {
                 toggleMusic();
