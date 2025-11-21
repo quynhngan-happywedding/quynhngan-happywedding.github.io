@@ -3,186 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thiệp Cưới | Quỳnh Ngân & Chú Rể</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Save The Date | Đức Quỳnh & Thảo Ny</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
         :root {
-            --primary-color: #ff9a9e;
+            /* Bộ màu lấy từ thiết kế Canva */
+            --primary-color: #800000; /* Đỏ Burgundy đậm */
+            --accent-color: #b8860b; /* Vàng Gold tối */
             --text-color: #4a4a4a;
-            --bg-color: #fff0f3;
+            --bg-silk: url('https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); /* Ảnh nền lụa thay thế chất lượng cao */
         }
 
         body {
             margin: 0;
             font-family: 'Montserrat', sans-serif;
             color: var(--text-color);
-            background-color: #fff;
+            /* Sử dụng nền lụa cố định, nội dung trượt lên trên */
+            background-image: var(--bg-silk);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; 
             overflow-x: hidden;
         }
 
-        h1, h2, h3 {
-            font-family: 'Dancing Script', cursive;
-            color: #d63384;
+        h1, h2, h3.serif-title {
+            font-family: 'Cinzel Decorative', cursive;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        /* Hiệu ứng Header */
+        .script-font {
+            font-family: 'Dancing Script', cursive;
+            color: var(--accent-color);
+            font-size: 1.8rem;
+        }
+
+        /* --- Header Section theo style Canva --- */
         header {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
+            min-height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: white;
+            padding: 20px;
             position: relative;
         }
 
+        .header-content {
+            border-top: 2px solid var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding: 30px 0;
+        }
+
         header h1 {
-            font-size: 4rem;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            animation: fadeInDown 2s ease;
+            font-size: 3.5rem;
+            margin: 10px 0;
+            line-height: 1.2;
         }
 
-        header p {
-            font-size: 1.5rem;
-            margin-top: 10px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            animation: fadeInUp 2s ease;
+        header .top-date {
+            font-family: 'Cinzel Decorative', cursive;
+            color: var(--primary-color);
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            display: block;
         }
 
-        /* Phần nội dung */
+        header .names {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin-top: 20px;
+        }
+
+        /* --- Phần Nội dung --- */
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 50px 20px;
+            padding: 40px 20px;
             text-align: center;
+            background-color: rgba(255, 255, 255, 0.6); /* Lớp nền trắng mờ để dễ đọc chữ trên nền lụa */
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
-        .love-story img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--bg-color);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin: 20px;
+        /* Ảnh cặp đôi có khung viền vàng */
+        .couple-photo-container {
+            position: relative;
+            display: inline-block;
+            padding: 10px;
+            border: 2px solid var(--accent-color); /* Viền vàng */
+            border-radius: 5px;
+            margin-top: 20px;
         }
+        .couple-photo {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 3px;
+        }
+       
 
-        /* Đồng hồ đếm ngược */
+        /* --- Đồng hồ đếm ngược --- */
         .countdown {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin: 40px 0;
+            gap: 15px;
+            margin: 30px 0;
             flex-wrap: wrap;
         }
 
         .time-box {
-            background: var(--bg-color);
-            padding: 20px;
-            border-radius: 15px;
-            min-width: 80px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px 20px;
+            border: 1px solid var(--accent-color);
+            border-radius: 10px;
+            min-width: 70px;
         }
 
         .time-box span {
             display: block;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: bold;
-            color: #d63384;
+            color: var(--primary-color);
+            font-family: 'Cinzel Decorative', cursive;
         }
 
         .time-box label {
             font-size: 0.8rem;
             text-transform: uppercase;
+            color: var(--accent-color);
         }
 
-        /* Nút bấm */
-        .btn-rsvp {
-            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
-            color: white;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            text-decoration: none;
-            transition: transform 0.3s;
+        /* --- Thông tin tiệc (Mô phỏng khung lịch Canva) --- */
+        .calendar-frame {
+            border: 2px solid var(--accent-color);
+            padding: 40px 20px;
+            position: relative;
+            margin-top: 50px;
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png'); /* Thêm vân giấy nhẹ */
+        }
+
+        /* Tạo hiệu ứng góc hoa văn vàng (Giả lập) */
+        .calendar-frame::before, .calendar-frame::after {
+            content: '❧'; /* Ký tự trang trí */
+            position: absolute;
+            font-size: 3rem;
+            color: var(--accent-color);
+            font-family: 'Dancing Script', cursive;
+        }
+        .calendar-frame::before { top: -20px; left: -10px; transform: rotate(-45deg); }
+        .calendar-frame::after { bottom: -20px; right: -10px; transform: rotate(135deg); }
+
+        .monogram {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        .calendar-title {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
             display: inline-block;
-            box-shadow: 0 5px 15px rgba(255, 154, 158, 0.4);
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 10px;
         }
 
-        .btn-rsvp:hover {
-            transform: scale(1.05);
+        /* Danh sách chi tiết có icon */
+        .details-list {
+            list-style: none;
+            padding: 0;
+            display: inline-block;
+            text-align: left;
+            margin-top: 30px;
         }
 
-        /* Thông tin tiệc */
-        .event-details {
-            background-color: #fffafb;
-            padding: 40px;
-            border-radius: 20px;
-            margin-top: 40px;
-            border: 1px dashed #ff9a9e;
+        .details-list li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+
+        .details-list li i {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+        }
+        
+        .highlight-text {
+             color: var(--primary-color);
+             font-weight: bold;
+             font-family: 'Cinzel Decorative', cursive;
+        }
+
+        /* Bản đồ */
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border: 2px solid var(--accent-color);
+            margin-top: 20px;
         }
 
         .footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
             text-align: center;
-            font-size: 0.9rem;
+            padding: 40px 20px;
+            background: rgba(255,255,255,0.8);
         }
-
-        /* Animation */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
+        .footer p.script-font {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
             header h1 { font-size: 2.5rem; }
-            header p { font-size: 1rem; }
+            header .names { font-size: 2rem; }
             .countdown { gap: 10px; }
             .time-box { padding: 10px; min-width: 60px; }
             .time-box span { font-size: 1.5rem; }
+            .calendar-frame { padding: 20px 10px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <p>Save the Date</p>
-        <h1>Quỳnh Ngân & Chú Rể</h1>
-        <p>01 . 01 . 2026</p>
-        <div style="margin-top: 20px;">
-            <i class="fas fa-heart" style="color: #ff9a9e; animation: pulse 1s infinite;"></i>
+        <div class="header-content">
+            <span class="top-date">11TH JAN</span>
+            <h1>SAVE<br>the<br>DATE</h1>
         </div>
+        <div class="names">Đức Quỳnh & Thảo Ny</div>
     </header>
 
-    <div class="container love-story">
-        <h2>Chuyện tình yêu</h2>
-        <p>Gặp nhau tình cờ, yêu nhau bất ngờ, và giờ đây chúng mình quyết định về chung một nhà.</p>
-        <div>
-            <img src="https://images.unsplash.com/photo-1535295972055-1c762f4483e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Chú Rể">
-            <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Cô Dâu">
+    <div class="container">
+        <p class="script-font">We are getting married!</p>
+        <h2 class="serif-title" style="font-size: 2rem;">Đức Quỳnh <i class="fas fa-heart" style="color: var(--accent-color); font-size: 1rem;"></i> Thảo Ny</h2>
+        
+        <div class="couple-photo-container">
+            <img src="https://images.unsplash.com/photo-1583934555972-94f30730969a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Couple Photo" class="couple-photo">
         </div>
-        <p style="font-style: italic; color: #888;">"Yêu là muốn ở bên một người, không phải một lúc mà là một đời."</p>
     </div>
 
-    <div class="container">
-        <h2>Đếm ngược ngày hạnh phúc</h2>
+    <div class="container" style="background: transparent; box-shadow: none;">
+        <h2 class="serif-title">Cùng đếm ngược ngày vui</h2>
         <div class="countdown" id="countdown">
             <div class="time-box"><span id="days">00</span><label>Ngày</label></div>
             <div class="time-box"><span id="hours">00</span><label>Giờ</label></div>
@@ -191,31 +267,53 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="event-details">
-            <h2><i class="fas fa-glass-cheers"></i> Tiệc Cưới</h2>
-            <p><strong>Thời gian:</strong> 11:00 AM, Chủ Nhật, Ngày 01 Tháng 01 Năm 2026</p>
-            <p><strong>Địa điểm:</strong> Nhà hàng Tiệc cưới Hạnh Phúc</p>
-            <p>Số 123, Đường Tình Yêu, Quận 1, TP.HCM</p>
-            <br>
-            <a href="https://forms.google.com" target="_blank" class="btn-rsvp">
-                <i class="fas fa-envelope-open-text"></i> Xác nhận tham dự
-            </a>
+    <div class="container calendar-frame">
+        <div class="monogram">Q & N</div>
+        <div class="calendar-title">Tháng Một 2026</div>
+        
+        <br>
+
+        <ul class="details-list">
+            <li>
+                <i class="far fa-clock"></i>
+                <div>
+                    <div class="highlight-text">17:00</div>
+                    <div>Chủ Nhật</div>
+                </div>
+            </li>
+            <li>
+                <i class="far fa-calendar-alt"></i>
+                <div>
+                    <div class="highlight-text">11 . 01 . 2026</div>
+                    <div>(Dương Lịch)</div>
+                </div>
+            </li>
+            <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <div class="highlight-text" style="font-size: 1rem;">GOLDEN PALACE</div>
+                    <div>Trung tâm Tiệc cưới & Hội nghị</div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.583739237227!2d105.77382131540206!3d21.009315593816487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab355cc2239b%3A0x9425726260606538!2sGolden%20Palace!5e0!3m2!1svi!2s!4v1679475688136!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 
-    <div style="width: 100%; height: 400px; background-color: #ddd;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4946681007846!2d106.69976391474886!3d10.773374292323597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f40a3b49e59%3A0xa1bd14e483a602db!2sBen%20Thanh%20Market!5e0!3m2!1sen!2s!4v1646812345678!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-
     <div class="footer">
-        <p>Made with <i class="fas fa-heart" style="color: red;"></i> by Quỳnh Ngân</p>
+        <p style="color: var(--accent-color);">Sự hiện diện của quý vị là niềm vinh hạnh của chúng tôi</p>
+        <p class="script-font" style="color: var(--primary-color);">Celebrate with us!</p>
+        <div style="font-size: 2rem; color: var(--accent-color); margin-top: 20px;">
+            <i class="fas fa-glass-cheers"></i>
+        </div>
     </div>
 
     <script>
-        // THAY ĐỔI NGÀY CƯỚI CỦA BẠN Ở ĐÂY (Năm, Tháng - 1, Ngày, Giờ, Phút)
-        // Lưu ý: Tháng bắt đầu từ 0 (Tháng 1 là 0, Tháng 12 là 11)
-        const weddingDate = new Date(2026, 0, 1, 11, 0, 0).getTime();
+        // ĐÃ CẬP NHẬT: 17:00 ngày 11/01/2026
+        // (Năm 2026, Tháng 0 (là tháng 1), Ngày 11, Giờ 17, Phút 0, Giây 0)
+        const weddingDate = new Date(2026, 0, 11, 17, 0, 0).getTime();
 
         const timer = setInterval(function() {
             const now = new Date().getTime();
@@ -223,7 +321,7 @@
 
             if (distance < 0) {
                 clearInterval(timer);
-                document.getElementById("countdown").innerHTML = "<h3>Đám cưới đã diễn ra! ❤️</h3>";
+                document.getElementById("countdown").innerHTML = "<h3 class='serif-title'>Đám cưới đã diễn ra! ❤️</h3>";
                 return;
             }
 
@@ -232,10 +330,10 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("days").innerText = days;
-            document.getElementById("hours").innerText = hours;
-            document.getElementById("minutes").innerText = minutes;
-            document.getElementById("seconds").innerText = seconds;
+            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
         }, 1000);
     </script>
 </body>
