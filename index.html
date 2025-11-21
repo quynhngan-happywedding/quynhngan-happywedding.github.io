@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Cưới | Quỳnh Ngân & Chú Rể</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #ff9a9e;
+            --text-color: #4a4a4a;
+            --bg-color: #fff0f3;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Dancing Script', cursive;
+            color: #d63384;
+        }
+
+        /* Hiệu ứng Header */
+        header {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeInDown 2s ease;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            animation: fadeInUp 2s ease;
+        }
+
+        /* Phần nội dung */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .love-story img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--bg-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 20px;
+        }
+
+        /* Đồng hồ đếm ngược */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .time-box {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 15px;
+            min-width: 80px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .time-box span {
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #d63384;
+        }
+
+        .time-box label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        /* Nút bấm */
+        .btn-rsvp {
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(255, 154, 158, 0.4);
+        }
+
+        .btn-rsvp:hover {
+            transform: scale(1.05);
+        }
+
+        /* Thông tin tiệc */
+        .event-details {
+            background-color: #fffafb;
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 40px;
+            border: 1px dashed #ff9a9e;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Animation */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            header p { font-size: 1rem; }
+            .countdown { gap: 10px; }
+            .time-box { padding: 10px; min-width: 60px; }
+            .time-box span { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p>Save the Date</p>
+        <h1>Quỳnh Ngân & Chú Rể</h1>
+        <p>01 . 01 . 2026</p>
+        <div style="margin-top: 20px;">
+            <i class="fas fa-heart" style="color: #ff9a9e; animation: pulse 1s infinite;"></i>
+        </div>
+    </header>
+
+    <div class="container love-story">
+        <h2>Chuyện tình yêu</h2>
+        <p>Gặp nhau tình cờ, yêu nhau bất ngờ, và giờ đây chúng mình quyết định về chung một nhà.</p>
+        <div>
+            <img src="https://images.unsplash.com/photo-1535295972055-1c762f4483e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Chú Rể">
+            <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Cô Dâu">
+        </div>
+        <p style="font-style: italic; color: #888;">"Yêu là muốn ở bên một người, không phải một lúc mà là một đời."</p>
+    </div>
+
+    <div class="container">
+        <h2>Đếm ngược ngày hạnh phúc</h2>
+        <div class="countdown" id="countdown">
+            <div class="time-box"><span id="days">00</span><label>Ngày</label></div>
+            <div class="time-box"><span id="hours">00</span><label>Giờ</label></div>
+            <div class="time-box"><span id="minutes">00</span><label>Phút</label></div>
+            <div class="time-box"><span id="seconds">00</span><label>Giây</label></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="event-details">
+            <h2><i class="fas fa-glass-cheers"></i> Tiệc Cưới</h2>
+            <p><strong>Thời gian:</strong> 11:00 AM, Chủ Nhật, Ngày 01 Tháng 01 Năm 2026</p>
+            <p><strong>Địa điểm:</strong> Nhà hàng Tiệc cưới Hạnh Phúc</p>
+            <p>Số 123, Đường Tình Yêu, Quận 1, TP.HCM</p>
+            <br>
+            <a href="https://forms.google.com" target="_blank" class="btn-rsvp">
+                <i class="fas fa-envelope-open-text"></i> Xác nhận tham dự
+            </a>
+        </div>
+    </div>
+
+    <div style="width: 100%; height: 400px; background-color: #ddd;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4946681007846!2d106.69976391474886!3d10.773374292323597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f40a3b49e59%3A0xa1bd14e483a602db!2sBen%20Thanh%20Market!5e0!3m2!1sen!2s!4v1646812345678!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="footer">
+        <p>Made with <i class="fas fa-heart" style="color: red;"></i> by Quỳnh Ngân</p>
+    </div>
+
+    <script>
+        // THAY ĐỔI NGÀY CƯỚI CỦA BẠN Ở ĐÂY (Năm, Tháng - 1, Ngày, Giờ, Phút)
+        // Lưu ý: Tháng bắt đầu từ 0 (Tháng 1 là 0, Tháng 12 là 11)
+        const weddingDate = new Date(2026, 0, 1, 11, 0, 0).getTime();
+
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown").innerHTML = "<h3>Đám cưới đã diễn ra! ❤️</h3>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+        }, 1000);
+    </script>
+</body>
+</html>
