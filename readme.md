@@ -4,3 +4,4 @@ instruct:
 2. Wait until done
 
 
+goto: https://quynhngan-happywedding.github.io
