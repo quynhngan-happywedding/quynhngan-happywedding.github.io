@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&family=Dancing+Script:wght@400;700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <link rel="stylesheet" href="styles/styles.css">
@@ -18,7 +19,7 @@
 <body>
 
     <video autoplay muted loop playsinline id="bg-video">
-        <source src="./video/silkwave-video-bg.mp4" type="video/mp4">
+        <source src="./media/silkwave-video-bg.mp4" type="video/mp4">
     </video>
 
     <div class="wrapper">
@@ -28,9 +29,7 @@
             <br>
             <h1 class="main-title">
                 <span>SAVE</span>
-                <br>
-                <span>THE</span>
-                <br>
+                <span class="the">the</span>
                 <span>DATE</span>
             </h1>
         </header>
@@ -42,6 +41,24 @@
         </div>
         <header>
             <div class="sub-text">we are getting married!</div>
+            <div class="countdown-box" id="countdown">
+                <div class="cd-item">
+                    <span class="cd-num" id="days">00</span>
+                    <span class="cd-label">Days</span>
+                </div>
+                <div class="cd-item">
+                    <span class="cd-num" id="hours">00</span>
+                    <span class="cd-label">Hours</span>
+                </div>
+                <div class="cd-item">
+                    <span class="cd-num" id="minutes">00</span>
+                    <span class="cd-label">Minutes</span>
+                </div>
+                <div class="cd-item">
+                    <span class="cd-num" id="seconds">00</span>
+                    <span class="cd-label">Seconds</span>
+                </div>
+            </div>
             <div style="text-align: center;">
                 <img src="./images/the_vine.png" width="70%" style="margin: 0 auto; align-self: center;" alt="">
             </div>
@@ -154,7 +171,8 @@
                     <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
 
                     <div class="location-name"><a href="https://maps.app.goo.gl/dYHg5N7UiuQGUKvL8"
-                            target="_blank">GOLDEN PALACE BIÊN HÒA</a></div>
+                            target="_blank">GOLDEN
+                            PALACE BIÊN HÒA</a></div>
                 </div>
             </div>
         </div>
@@ -178,16 +196,15 @@
         </div>
     </div>
 
-    <audio id="bgMusic" loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    <audio id="bgMusic" autoplay loop>
+        <source src="./media/wheres-my-love.mp3" type="audio/mpeg">
     </audio>
 
-    <div class="music-player">
+    <!-- <div class="music-player">
         <button class="music-btn" onclick="toggleMusic()" id="musicToggle">
             <i class="fas fa-play"></i>
         </button>
-        <span style="font-size: 0.8rem; font-weight: bold;">Music</span>
-    </div>
+    </div> -->
 
     <script>
         const weddingDate = new Date(2026, 0, 11, 18, 0, 0).getTime();
@@ -198,7 +215,7 @@
 
             if (distance < 0) {
                 clearInterval(timer);
-                document.getElementById("countdown").innerHTML = "<h3>Đám cưới đang diễn ra! ❤️</h3>";
+                document.getElementById("countdown").innerHTML = "<h3>❤️ Đám cưới đang diễn ra! ❤️</h3>";
                 return;
             }
 
