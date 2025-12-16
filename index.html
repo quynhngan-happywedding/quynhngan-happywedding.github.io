@@ -1,301 +1,20 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thiệp Cưới | Đức Quỳnh & Thảo Ngân</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --bg-color: #f8f6f2;
-            --primary-red: #7a0000;
-            --text-brown: #624a44;
-            --accent-gold: #b9a686;
-        }
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-brown);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        #bg-video {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            z-index: -1;
-        }
-
-        h1, h2, h3, .serif-font {
-            font-family: 'Cormorant Garamond', serif;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-
-        .script-font {
-            font-family: 'Great Vibes', cursive;
-            font-weight: 400;
-        }
-
-        .wrapper {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.69);
-            box-shadow: 0 0 20px rgba(0,0,0,0.05);
-            padding-bottom: 50px;
-            position: relative;
-        }
-
-        header {
-            padding: 60px 20px;
-            text-align: center;
-            position: relative;
-        }
-
-        .top-date {
-            font-size: 1.2rem;
-            letter-spacing: 3px;
-            color: #000;
-            display: block;
-            margin-bottom: 10px;
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .main-title {
-            font-size: 4rem;
-            line-height: 0.9;
-            color: var(--primary-red);
-            margin: 10px 0 30px 0;
-            letter-spacing: 5px;
-        }
-        
-        .main-title span {
-            display: block;
-        }
-
-        .sub-text {
-            font-family: 'Dancing Script', cursive;
-            font-size: 2rem;
-            color: #61433c;
-            margin-top: 20px;
-        }
-
-        .names-section {
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .couple-name {
-            font-family: 'Great Vibes', cursive;
-            font-size: 3.5rem;
-            color: #ac7c6e;
-            margin: 10px 0;
-            line-height: 1.2;
-        }
-
-        .ampersand {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            color: var(--text-brown);
-        }
-
-        .photo-frame {
-            margin: 20px auto;
-            width: 80%;
-            position: relative;
-            padding: 10px;
-            border: 1px solid var(--accent-gold);
-        }
-        
-        .photo-frame img {
-            width: 100%;
-            height: auto;
-            display: block;
-            filter: sepia(10%);
-        }
-
-        .calendar-section {
-            text-align: center;
-            padding: 40px 20px;
-            background-image: url('images/calendar-bg.png');
-            background-size: cover;
-            background-position: center;
-            border: 1px solid var(--accent-gold);
-            margin: 20px;
-        }
-
-        .calendar-title {
-            font-size: 1.5rem;
-            letter-spacing: 2px;
-            color: var(--primary-red);
-            margin-bottom: 5px;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
-        .calendar-year {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--text-brown);
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 10px;
-            max-width: 350px;
-            margin: 0 auto;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.1rem;
-        }
-
-        .dow {
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            color: #000;
-            margin-bottom: 10px;
-        }
-
-        .day {
-            padding: 5px;
-            color: var(--text-brown);
-        }
-
-        .day.active {
-            background-color: var(--primary-red);
-            color: white;
-            border-radius: 50%;
-            font-weight: bold;
-            position: relative;
-        }
-
-        .details-section {
-            text-align: center;
-            padding: 30px 20px;
-        }
-        
-        .details-section .detail-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 15px 0;
-        }
-
-        .details-section .icon {
-            font-size: 1.5rem;
-            color: var(--primary-red);
-            margin-right: 15px;
-        }
-        
-        .big-time {
-            font-size: 2.5rem;
-            color: var(--text-brown);
-            font-weight: bold;
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .location-name {
-            font-size: 1.4rem;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: var(--text-brown);
-            margin-bottom: 5px;
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .map-wrapper {
-            width: 100%;
-            height: 300px;
-            margin-top: 20px;
-        }
-
-        .countdown-box {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 40px 0;
-            color: var(--text-brown);
-        }
-        .cd-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .cd-num {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--primary-red);
-        }
-        .cd-label {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .illustration-section {
-            text-align: center;
-            padding: 40px 20px;
-        }
-        
-        .illustration-section img {
-            max-width: 80%;
-            height: auto;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 40px 20px;
-        }
-        
-        .celebrate-text {
-            font-family: 'Dancing Script', cursive;
-            font-size: 2.5rem;
-            color: #000;
-        }
-
-        .music-player {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 100;
-            background: rgba(255,255,255,0.8);
-            padding: 10px;
-            border-radius: 50px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .music-btn {
-            border: none;
-            background: var(--primary-red);
-            color: white;
-            width: 40px; height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        @media (max-width: 480px) {
-            .main-title { font-size: 3rem; }
-            .couple-name { font-size: 2.8rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
 
     <video autoplay muted loop playsinline id="bg-video">
@@ -323,8 +42,39 @@
             <img src="./images/groom_bride.jpg" alt="Wedding Photo">
         </div>
 
-        <div id="intro-2-families">  
-            <!-- introduction of 2 families --->    
+        <div id="intro-2-families">
+            <div class="monogram-box">
+                <div class="monogram-content">
+                    <span>Q</span>
+                    <div class="monogram-line"></div>
+                    <span>N</span>
+                </div>
+            </div>
+
+            <div class="fe-row">
+                <div class="fe-col">
+                    <div class="fe-title">NHÀ TRAI</div>
+                    <div class="parent-info">
+                        <p>Ông: Nguyễn Đức Quỳ</p>
+                        <p>Bà: Hà Thị Biển</p>
+                    </div>
+                </div>
+                <div class="fe-col">
+                    <div class="fe-title">NHÀ GÁI</div>
+                    <div class="parent-info">
+                        <p>Ông: Trần Huy Lâm</p>
+                        <p>Bà: Nguyễn Thị Bích Liên</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="announcement">
+                TRÂN TRỌNG BÁO TIN LỄ THÀNH HÔN<br>CỦA CON CHÚNG TÔI
+            </div>
+
+            <div class="fe-couple-name">NGUYỄN ĐỨC QUỲNH</div>
+            <div class="fe-amp">&</div>
+            <div class="fe-couple-name">TRẦN THẢO NGÂN</div>
 
         </div>
         <div class="calendar-section">
@@ -332,21 +82,56 @@
             <span class="calendar-year">2026</span>
 
             <div class="calendar-grid">
-                <div class="dow">SUN</div><div class="dow">MON</div><div class="dow">TUE</div><div class="dow">WED</div><div class="dow">THU</div><div class="dow">FRI</div><div class="dow">SAT</div>
-                
-                <div></div><div></div><div></div><div></div>
-                <div class="day">1</div><div class="day">2</div><div class="day">3</div>
-                
-                <div class="day">4</div><div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div><div class="day">9</div><div class="day">10</div>
-                
-                <div class="day active">11</div><div class="day">12</div><div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div><div class="day">17</div>
-                
-                <div class="day">18</div><div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div><div class="day">23</div><div class="day">24</div>
-                
-                <div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div><div class="day">29</div><div class="day">30</div><div class="day">31</div>
+                <div class="dow">SUN</div>
+                <div class="dow">MON</div>
+                <div class="dow">TUE</div>
+                <div class="dow">WED</div>
+                <div class="dow">THU</div>
+                <div class="dow">FRI</div>
+                <div class="dow">SAT</div>
+
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+
+                <div class="day active">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day">31</div>
             </div>
-            
-            
+
+
             <div class="details-section">
                 <div class="detail-item">
                     <div class="icon"><i class="far fa-clock"></i></div>
@@ -362,20 +147,16 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="details-section">
-             <p class="serif-font" style="font-size: 1.1rem; margin-top: 10px;">
+            <p class="serif-font" style="font-size: 1.1rem; margin-top: 10px;">
                 Sự hiện diện của quý vị là<br>niềm vinh hạnh của chúng tôi
             </p>
         </div>
-        
+
         <div class="map-wrapper">
-             <iframe 
-                width="100%" 
-                height="100%" 
-                frameborder="0" 
-                style="border:0" 
-                src="https://www.google.com/maps?q=10.964256686278185,106.84397027032419&hl=vi&z=16&output=embed" 
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+                src="https://www.google.com/maps?q=10.964256686278185,106.84397027032419&hl=vi&z=16&output=embed"
                 allowfullscreen>
             </iframe>
         </div>
@@ -400,7 +181,7 @@
     <script>
         const weddingDate = new Date(2026, 0, 11, 18, 0, 0).getTime();
 
-        const timer = setInterval(function() {
+        const timer = setInterval(function () {
             const now = new Date().getTime();
             const distance = weddingDate - now;
 
@@ -435,12 +216,13 @@
             // }
             // isPlaying = !isPlaying;
         }
-        
-        document.body.addEventListener('click', function() {
+
+        document.body.addEventListener('click', function () {
             // if (!isPlaying) {
             //     toggleMusic();
             // }
         }, { once: true });
     </script>
 </body>
+
 </html>

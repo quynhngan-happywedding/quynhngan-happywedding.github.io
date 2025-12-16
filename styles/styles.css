@@ -1,0 +1,432 @@
+:root {
+    --bg-color: #f8f6f2;
+    --primary-red: #7a0000;
+    --text-brown: #624a44;
+    --accent-gold: #b9a686;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-brown);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+h1,
+h2,
+h3,
+.serif-font {
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.script-font {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+}
+
+.wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.69);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    padding-bottom: 50px;
+    position: relative;
+}
+
+header {
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.top-date {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    color: #000;
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.main-title {
+    font-size: 4rem;
+    line-height: 0.9;
+    color: var(--primary-red);
+    margin: 10px 0 30px 0;
+    letter-spacing: 5px;
+}
+
+.main-title span {
+    display: block;
+}
+
+.sub-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #61433c;
+    margin-top: 20px;
+}
+
+.names-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.couple-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: #ac7c6e;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.ampersand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: var(--text-brown);
+}
+
+.photo-frame {
+    margin: 20px auto;
+    width: 80%;
+    position: relative;
+    padding: 10px;
+    border: 1px solid var(--accent-gold);
+}
+
+.photo-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: sepia(10%);
+}
+
+.calendar-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-image: url('../images/calendar-bg.png');
+    /* Adjusted path since css is in styles/ */
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--accent-gold);
+    margin: 20px;
+}
+
+.calendar-title {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--primary-red);
+    margin-bottom: 5px;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.calendar-year {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-brown);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    max-width: 350px;
+    margin: 0 auto;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+}
+
+.dow {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.day {
+    padding: 5px;
+    color: var(--text-brown);
+}
+
+.day.active {
+    background-color: var(--primary-red);
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    position: relative;
+}
+
+.details-section {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.details-section .detail-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.details-section .icon {
+    font-size: 1.5rem;
+    color: var(--primary-red);
+    margin-right: 15px;
+}
+
+.big-time {
+    font-size: 2.5rem;
+    color: var(--text-brown);
+    font-weight: bold;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.location-name {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--text-brown);
+    margin-bottom: 5px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.map-wrapper {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.countdown-box {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 40px 0;
+    color: var(--text-brown);
+}
+
+.cd-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cd-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-red);
+}
+
+.cd-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.illustration-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.illustration-section img {
+    max-width: 80%;
+    height: auto;
+}
+
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.celebrate-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #000;
+}
+
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.music-btn {
+    border: none;
+    background: var(--primary-red);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .couple-name {
+        font-size: 2.8rem;
+    }
+}
+
+/* Family Intro Section Styles */
+#intro-2-families {
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--text-brown);
+    position: relative;
+    z-index: 1;
+    /* Establishes a stacking context */
+}
+
+#intro-2-families::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/holding_hand.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.monogram-box {
+    margin: 0 auto 30px;
+    width: 140px;
+    height: 160px;
+    border: 1px solid var(--accent-gold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url('../images/monogram.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Decorative frame touches */
+.monogram-box::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 1px solid var(--accent-gold);
+    opacity: 0.5;
+}
+
+.monogram-content {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    line-height: 1;
+    z-index: 1;
+    /* background: rgba(255, 255, 255, 0.8); */
+    /* readable on bg */
+    padding: 10px;
+}
+
+.monogram-content span {
+    display: block;
+}
+
+.monogram-line {
+    width: 30px;
+    height: 1px;
+    background-color: var(--text-brown);
+    margin: 5px auto;
+}
+
+.fe-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.fe-col {
+    flex: 1;
+    min-width: 45%;
+    /* slightly less than half to allow gap */
+}
+
+.fe-title {
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--accent-gold);
+    display: inline-block;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    color: #ac7c6e;
+    /* Match image slightly lighter brown/pinkish */
+}
+
+.parent-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: var(--text-brown);
+}
+
+.announcement {
+    color: var(--primary-red);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin: 30px 0;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.fe-couple-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--text-brown);
+    letter-spacing: 2px;
+    margin: 10px 0;
+}
+
+.fe-amp {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: var(--accent-gold);
+    margin: 0;
+}
