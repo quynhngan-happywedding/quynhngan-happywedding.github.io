@@ -496,3 +496,75 @@ header {
     color: var(--accent-gold);
     margin: 0;
 }
+
+/* Gift Section */
+#gift-section {
+    padding: 40px 20px;
+    background-color: transparent;
+}
+
+.gift-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* Wraps on mobile */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.gift-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(185, 166, 134, 0.2);
+    /* Subtle gold border */
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.gift-card:hover {
+    transform: translateY(-5px);
+}
+
+.gift-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.8rem;
+    color: var(--text-brown);
+    margin-bottom: 20px;
+}
+
+.qr-code {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    /* border: 1px solid #eee; */
+}
+
+.bank-info {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-brown);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.bank-name {
+    font-weight: 500;
+}
+
+.account-name {
+    font-weight: 600;
+    margin: 2px 0;
+    text-transform: uppercase;
+}
+
+.account-number {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
