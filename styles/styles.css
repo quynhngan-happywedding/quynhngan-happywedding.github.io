@@ -600,7 +600,7 @@ header {
 /* Guest Link Styles */
 .guest-link-wrapper {
     text-align: center;
-    margin-bottom: 15px;
+    margin: 10px 0px;
 }
 
 .guest-link-btn {
